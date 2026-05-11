@@ -1,0 +1,1 @@
+para rodar via terminal, só escrever langgraph dev
