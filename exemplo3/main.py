@@ -8,7 +8,10 @@ import os
 load_dotenv()
 API_KEY = os.getenv("OPENAI_API_KEY")
 
-llm_model = ChatOpenAI(model="gpt-4.1-nano", api_key=API_KEY)
+llm_model = ChatOpenAI(
+    model="gpt-4.1-nano", 
+    api_key=API_KEY
+)
 
 # Definição do estado do graph
 class GraphState(BaseModel):
@@ -52,6 +55,7 @@ graph.add_node("realizar_calculo", realizar_calculo)
 graph.add_node("responder_curiosidade", responder_curiosidades)
 graph.add_node("responder_erro", responder_erro)
 
+# Esse nó que chama os outros nós
 # Adicionando condicionais
 graph.add_conditional_edges(
     # Aqui, ele consegue acessar o state.tipo, pois eu coloquei para rodar primeiro a função classificar, e o LangGraph consegue perssistir as informações retornadas

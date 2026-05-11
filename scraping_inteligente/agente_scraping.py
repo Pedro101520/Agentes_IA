@@ -32,7 +32,7 @@ if __name__ == '__main__':
     )
 
     result = agent_chain.invoke(
-        input='''Quero que analise a seguinte página: https://venhasersafra.gupy.io/, e me diga se ela tem alguma area que exibem mais vagas, de tal forma que essas novas vagas, sejam exibidas com carregamento dinamico, se tive, me retorne aqui o seletor dessa parte e depois clique nela e me traga as vagas dessa segunda parte'''
+        input='''Quero que analise a seguinte página: https://venhasersafra.gupy.io/, e me retorne o seletor dos botões que mudam a página de exibição das vagas'''
     )
 
     print(result.get('output'))
