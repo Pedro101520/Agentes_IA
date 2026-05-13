@@ -24,6 +24,7 @@ class GraphState(BaseModel):
 # Essas função é algo mais para entender como se trabalha com condições no LangGraph, por isso as respostas são ficticias
 # Função de realizar cálculo
 def realizar_calculo(state: GraphState) -> GraphState:
+    print(state.tipo)
     return GraphState(input=state.input, output="Resposta de cálculo fictício: 42")
 
 def responder_curiosidades(state: GraphState) -> GraphState:
