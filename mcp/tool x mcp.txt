@@ -1,0 +1,6 @@
+Resumindo a diferença conceitual
+                    Tool                                MCP
+Escopo              Local, dentro do seu código         Servidor externo, reutilizável
+Complexidade        Simples                             Mais infraestrutura
+Portabilidade       Nenhuma                             Alta
+Quando usar         Projeto único                       Múltiplos consumidores
